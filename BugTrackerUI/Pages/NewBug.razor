@@ -9,5 +9,11 @@
 </EditForm>
 
 @code {
-    public Bug AddBug = new Bug();
+    public Bug AddBug { get; set; }
+
+    protected override void OnInitialized()
+    {
+        AddBug = new Bug();
+    }
+
 }
